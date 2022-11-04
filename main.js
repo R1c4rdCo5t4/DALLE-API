@@ -7,7 +7,7 @@ let generateImageRequest = async () => {
     const input = document.getElementById("prompt").value;
 
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: "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",
     })
     const openai = new OpenAIApi(configuration);
 
