@@ -1,0 +1,150 @@
+body {
+    background-image: url("background.jpg");
+    
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    padding: 0;
+    margin: -10px;
+    overflow: hidden; /* Hide scrollbars */
+    color:white;
+}
+
+.center {
+    margin-left:0;
+    text-align: center;
+    font-family: "JetBrains Mono",monospace;
+    color:white;
+  }
+
+h1 {
+    font-size: 50px;
+    
+}
+
+input, select, textarea{
+    color: white;
+    size: 10%;
+}
+
+#openai_logo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 10%;
+    padding: 2%;
+    height: auto;
+    
+}
+
+#credits{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 10%;
+    padding: 1px;
+    height: auto;
+    
+}
+
+#prompt-img {
+    border-radius: 5%;
+
+}
+
+
+.btn {
+   
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 60px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 20px;
+}
+
+
+
+.btn:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+
+
+
+
+
+.center .inputbox {
+    position: relative;
+    width: 30%;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: 34%;
+
+    
+  }
+  .center .inputbox input {
+   
+    width: 100%;
+    border: 2px solid white;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+  .center .inputbox:last-child {
+    margin-bottom: 0;
+  }
+  .center .inputbox span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+  }
+  .center .inputbox input:focus ~ span,
+  .center .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+  .center .inputbox [type="button"] {
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+  }
+  .center .inputbox:hover [type="button"] {
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+  }
+  
