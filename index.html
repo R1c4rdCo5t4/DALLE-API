@@ -9,29 +9,55 @@
     </head>
 
     <body>
-        <script src="./bundle.js"></script>
+    
         <script type="module" src="./out.js"></script>
         <link rel="stylesheet" href="styles.css">
 
-        <div class="center">
-            <h1>DALL-E Prompt</h1>
-            <br><br>
+        <div class="row">
 
-            <div class="input">
-                <div class="inputbox" type="text">
-                    <input type="text" name="prompt" id="prompt" autocomplete="off">
-                    <span>Prompt</span>
+            <div class="column" id="column-left">
+                <h1>DALL-E API</h1>
+                <br><br>
+    
+                <div class="input">
+                    <div class="inputbox" type="text">
+                        <input type="password" name="prompt" id="token" autocomplete="off">
+                        <span>Token</span>
+                    </div>
+
+                    <div class="inputbox" type="text">
+                        <input type="text" name="prompt" id="prompt" autocomplete="off">
+                        <span>Prompt</span>
+                    </div>
+        
+                    <button class="btn" type="button" id="prompt-submit">Generate Image</button>
+                   
                 </div>
     
-                <button class="btn" type="button" id="prompt-submit">Generate Image</button>
-
+                <br>
+    
+                
+                
             </div>
 
-            <br>
+            <div class="column">
+                <img id="prompt-img" src="example_img.png" width="512" height="512" alt="">
 
-            <img id="prompt-img" src="" alt="">
-            <p id="credits">by R1cardCo5t4</p>
+                <a id="download-link" href="example_img.png" download="image">
+                    <button class="btn" type="button" id="download-img">Download Image</button>
+                </a>
+               
+
+                
+    
+            </div>
+
         </div>
+
+        
+        <p id="credits">by R1cardCo5t4</p>
+
+        
 
         <img id="openai_logo" src="openai_logo.png">
         

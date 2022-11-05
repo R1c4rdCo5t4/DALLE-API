@@ -1,5 +1,6 @@
 body {
     background-image: url("background.jpg");
+    background-size: 100vw 100vh;
     
     width: 100vw;
     height: 100vh;
@@ -8,12 +9,14 @@ body {
     margin: -10px;
     overflow: hidden; /* Hide scrollbars */
     color:white;
+    font-family: "JetBrains Mono",monospace;
 }
 
-.center {
+#column-left {
+    margin-top: 5%;
     margin-left:0;
     text-align: center;
-    font-family: "JetBrains Mono",monospace;
+    
     color:white;
   }
 
@@ -49,8 +52,35 @@ input, select, textarea{
 
 #prompt-img {
     border-radius: 5%;
+    margin: 10% 10% 0 0;
 
 }
+
+
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+a:link { text-decoration: none; }
 
 
 .btn {
@@ -83,6 +113,8 @@ input, select, textarea{
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 20px;
+  margin:  20px;
+
 }
 
 
@@ -103,16 +135,16 @@ input, select, textarea{
 
 
 
-.center .inputbox {
+.inputbox {
     position: relative;
     width: 30%;
     height: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     margin-left: 34%;
 
     
   }
-  .center .inputbox input {
+  .inputbox input {
    
     width: 100%;
     border: 2px solid white;
@@ -122,10 +154,10 @@ input, select, textarea{
     border-radius: 10px;
     font-size: 1.2em;
   }
-  .center .inputbox:last-child {
+  .inputbox:last-child {
     margin-bottom: 0;
   }
-  .center .inputbox span {
+  .inputbox span {
     position: absolute;
     top: 14px;
     left: 20px;
@@ -133,18 +165,18 @@ input, select, textarea{
     transition: 0.6s;
     font-family: sans-serif;
   }
-  .center .inputbox input:focus ~ span,
-  .center .inputbox input:valid ~ span {
+  .inputbox input:focus ~ span,
+  .inputbox input:valid ~ span {
     transform: translateX(-13px) translateY(-35px);
     font-size: 1em;
   }
-  .center .inputbox [type="button"] {
+  .inputbox [type="button"] {
     width: 50%;
     background: dodgerblue;
     color: #fff;
     border: #fff;
   }
-  .center .inputbox:hover [type="button"] {
+  .inputbox:hover [type="button"] {
     background: linear-gradient(45deg, greenyellow, dodgerblue);
   }
   
