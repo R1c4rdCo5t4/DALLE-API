@@ -1,16 +1,14 @@
-// import { Configuration, OpenAIApi } from "/node_modules/openai"
 
-
-// browserify main.js -o out.js
+// browserify main.js -o out.js to compile for browser
 
 const { Configuration, OpenAIApi } = require("openai")
 
 let generateImageRequest = async () => {
 
-
-    document.getElementById("prompt-img").src = ""
     const prompt = document.getElementById("prompt").value;
     const token = document.getElementById("token").value;
+    document.getElementById("prompt-img").src = ""
+    document.getElementById("prompt-img").alt = prompt
 
 
     const configuration = new Configuration({
@@ -27,26 +25,8 @@ let generateImageRequest = async () => {
     let image_url = response.data.data[0].url;
 
     document.getElementById("prompt-img").src = image_url
-    document.getElementById("prompt-img").alt = prompt
-    
     document.getElementById("download-link").href = image_url;
- 
-    
-    
-    
+   
 }
 
 document.getElementById("prompt-submit").addEventListener("click", generateImageRequest)
-
-// function changeLink(id, link) {
-
-//     var link = document.getElementById(id);
-
-//     window.open(
-//       link.href,
-//       '_blank'
-//     );
-
-//     link.setAttribute('href', link);
-// }
-// changeLink("download-link", image_url)

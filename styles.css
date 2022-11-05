@@ -25,6 +25,10 @@ h1 {
     
 }
 
+a {
+  color:white;
+}
+
 input, select, textarea{
     color: white;
     size: 10%;
